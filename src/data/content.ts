@@ -61,33 +61,55 @@ export const treatments: Treatment[] = [
 
 export const results: ResultItem[] = [
   {
-    id: 'r-comparison-labios-nariz',
+    id: 'r-comparison-perfil-nuevo',
     type: 'comparison',
-    title: 'Labios y nariz — Antes y después',
+    title: 'Antes y después',
+    before: '/images/resultados/perfil-cliente-antes.jpg',
+    after: '/images/resultados/perfil-cliente-despues.jpg',
+    imageFocus: 'profile',
+  },
+  {
+    id: 'r-comparison-perfil',
+    type: 'comparison',
+    title: 'Antes y después',
     before: '/images/resultados/perfil-antes.png',
     after: '/images/resultados/perfil-despues.png',
     imageFocus: 'profile',
   },
   {
+    id: 'r-showcase-nuevo-1',
+    type: 'showcase',
+    title: 'Resultado real',
+    src: '/images/resultados/resultado-cliente-01.jpg',
+    imageFocus: 'lips',
+  },
+  {
+    id: 'r-showcase-nuevo-2',
+    type: 'showcase',
+    title: 'Resultado real',
+    src: '/images/resultados/resultado-cliente-02.jpg',
+    imageFocus: 'lips',
+  },
+  {
+    id: 'r-showcase-nuevo-3',
+    type: 'showcase',
+    title: 'Resultado real',
+    src: '/images/resultados/resultado-cliente-03.jpg',
+    imageFocus: 'center',
+  },
+  {
+    id: 'r-showcase-nuevo-4',
+    type: 'showcase',
+    title: 'Resultado real',
+    src: '/images/resultados/resultado-cliente-04.jpg',
+    imageFocus: 'center',
+  },
+  {
     id: 'r-showcase-labios-1',
     type: 'showcase',
-    title: 'Aumento de labios',
+    title: 'Resultado real',
     src: '/images/resultados/labios-resultado-03.png',
     imageFocus: 'lips',
-  },
-  {
-    id: 'r-showcase-labios-2',
-    type: 'showcase',
-    title: 'Aumento de labios',
-    src: '/images/resultados/labios-resultado-04.png',
-    imageFocus: 'lips',
-  },
-  {
-    id: 'r-showcase-micropigmentacion',
-    type: 'showcase',
-    title: 'Micropigmentación de labios',
-    src: '/images/resultados/micropigmentacion-labios.png',
-    imageFocus: 'center',
   },
 ]
 
@@ -97,24 +119,21 @@ export const clinicVideos: ClinicVideo[] = [
     title: 'Recorrido por la clínica',
     description: 'Espacios diseñados para tu comodidad y tranquilidad.',
     src: 'https://videos.pexels.com/video-files/3997983/3997983-uhd_2560_1440_25fps.mp4',
-    poster:
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    poster: '/images/resultados/resultado-cliente-03.jpg',
   },
   {
     id: 'v2',
-    title: 'Nuestro equipo',
-    description: 'Profesionales especializados en estética avanzada.',
+    title: 'Tratamientos y resultados',
+    description: 'Técnicas exclusivas para potenciar tu belleza natural.',
     src: 'https://videos.pexels.com/video-files/853189/853189-hd_1920_1080_30fps.mp4',
-    poster:
-      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80',
+    poster: '/images/resultados/resultado-cliente-04.jpg',
   },
   {
     id: 'v3',
-    title: 'Ambiente premium',
+    title: 'Experiencia Velvet',
     description: 'Cada detalle pensado para una experiencia exclusiva.',
     src: 'https://videos.pexels.com/video-files/3999358/3999358-uhd_2560_1440_25fps.mp4',
-    poster:
-      'https://images.unsplash.com/photo-1519494026891-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    poster: '/images/resultados/resultado-cliente-01.jpg',
   },
 ]
 

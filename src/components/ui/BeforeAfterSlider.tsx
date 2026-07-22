@@ -33,6 +33,7 @@ export default function BeforeAfterSlider({
   }, [])
 
   const onPointerDown = (e: React.PointerEvent) => {
+    e.stopPropagation()
     isDragging.current = true
     containerRef.current?.setPointerCapture(e.pointerId)
     updatePosition(e.clientX)
@@ -55,11 +56,13 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden cursor-ew-resize touch-none bg-velvet-black ${className}`}
+      className={`relative w-full aspect-square overflow-hidden cursor-ew-resize touch-none bg-velvet-black ${className}`}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
+      onMouseDown={(e) => e.stopPropagation()}
+      onMouseMove={(e) => e.stopPropagation()}
       role="slider"
       aria-label={`Comparar antes y después: ${title}`}
       aria-valuenow={Math.round(position)}
