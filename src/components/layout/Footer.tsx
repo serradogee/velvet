@@ -1,4 +1,5 @@
 import { SITE } from '../../config/site'
+import Logo from '../ui/Logo'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -6,7 +7,12 @@ export default function Footer() {
   return (
     <footer className="bg-velvet-black text-white/70 section-padding">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="font-display text-2xl text-white mb-2">Velvet Clinic</p>
+        <Logo
+          size="md"
+          variant="light"
+          showTagline
+          className="mx-auto mb-5"
+        />
         <p className="text-sm font-light mb-6">
           Belleza natural · Profesionalidad · Confianza
         </p>
