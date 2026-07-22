@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { MapPin } from 'lucide-react'
+import { LOCATION } from '../../config/site'
 import { HERO_POSTER, HERO_VIDEO } from '../../data/content'
 import WhatsAppButton from '../ui/WhatsAppButton'
 
@@ -19,14 +21,22 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-velvet-black/60 via-velvet-black/40 to-velvet-black/70" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-5 pt-24 pb-20 text-center text-white">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xs md:text-sm uppercase tracking-[0.4em] text-velvet-gold-light mb-6 font-medium"
+          className="flex items-center justify-center gap-2 mb-5"
         >
-          Clínica estética premium
-        </motion.p>
+          <a
+            href={LOCATION.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full text-xs md:text-sm font-light tracking-wide text-white border border-white/25 hover:bg-velvet-gold hover:border-velvet-gold transition-all shadow-lg"
+          >
+            <MapPin className="w-3.5 h-3.5 text-velvet-gold shrink-0" />
+            <span>{LOCATION.full}</span>
+          </a>
+        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
