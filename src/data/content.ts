@@ -12,8 +12,8 @@ export const treatments: Treatment[] = [
       'Procedimiento rápido y mínimamente invasivo',
       'Recuperación inmediata',
     ],
-    image:
-      'https://images.unsplash.com/photo-1512290883905-6694dc894c2a?auto=format&fit=crop&w=800&q=80',
+    image: '/images/resultados/labios-principal.png',
+    imageFocus: 'center',
   },
   {
     id: 'micropigmentacion',
@@ -26,8 +26,8 @@ export const treatments: Treatment[] = [
       'Pigmentos hipoalergénicos premium',
       'Efecto natural durante años',
     ],
-    image:
-      'https://images.unsplash.com/photo-1560750588-73207b1e5b33?auto=format&fit=crop&w=800&q=80',
+    image: '/images/resultados/micropigmentacion-labios.png',
+    imageFocus: 'center',
   },
   {
     id: 'faciales',
@@ -61,39 +61,33 @@ export const treatments: Treatment[] = [
 
 export const results: ResultItem[] = [
   {
-    id: 'r1',
-    type: 'image',
+    id: 'r-comparison-labios-nariz',
+    type: 'comparison',
+    title: 'Labios y nariz — Antes y después',
+    before: '/images/resultados/perfil-antes.png',
+    after: '/images/resultados/perfil-despues.png',
+    imageFocus: 'profile',
+  },
+  {
+    id: 'r-showcase-labios-1',
+    type: 'showcase',
     title: 'Aumento de labios',
-    before:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80',
-    after:
-      'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80',
+    src: '/images/resultados/labios-resultado-03.png',
+    imageFocus: 'lips',
   },
   {
-    id: 'r2',
-    type: 'image',
-    title: 'Micropigmentación de cejas',
-    before:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
-    after:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80',
+    id: 'r-showcase-labios-2',
+    type: 'showcase',
+    title: 'Aumento de labios',
+    src: '/images/resultados/labios-resultado-04.png',
+    imageFocus: 'lips',
   },
   {
-    id: 'r3',
-    type: 'video',
-    title: 'Tratamiento facial en acción',
-    src: 'https://videos.pexels.com/video-files/3997983/3997983-uhd_2560_1440_25fps.mp4',
-    poster:
-      'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 'r4',
-    type: 'image',
-    title: 'Rejuvenecimiento facial',
-    before:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-    after:
-      'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80',
+    id: 'r-showcase-micropigmentacion',
+    type: 'showcase',
+    title: 'Micropigmentación de labios',
+    src: '/images/resultados/micropigmentacion-labios.png',
+    imageFocus: 'center',
   },
 ]
 

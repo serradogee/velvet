@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import { treatments } from '../../data/content'
+import { getImageFocusClass } from '../../lib/imageFocus'
 import AnimatedSection from '../ui/AnimatedSection'
 import SectionHeading from '../ui/SectionHeading'
 import WhatsAppButton from '../ui/WhatsAppButton'
@@ -19,12 +20,12 @@ export default function Treatments() {
           {treatments.map((treatment, index) => (
             <AnimatedSection key={treatment.id} delay={index * 0.1}>
               <article className="premium-card overflow-hidden group h-full flex flex-col">
-                <div className="relative h-56 md:h-64 overflow-hidden">
+                <div className="relative h-56 md:h-64 overflow-hidden bg-velvet-black">
                   <img
                     src={treatment.image}
                     alt={treatment.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-velvet-black/50 to-transparent" />
                   <span className="absolute bottom-4 left-4 text-3xl">

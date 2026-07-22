@@ -1,7 +1,9 @@
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { results } from '../../data/content'
+import { getImageFocusClass } from '../../lib/imageFocus'
 import AnimatedSection from '../ui/AnimatedSection'
+import BeforeAfterSlider from '../ui/BeforeAfterSlider'
 import SectionHeading from '../ui/SectionHeading'
 
 export default function Results() {
@@ -22,7 +24,7 @@ export default function Results() {
         <AnimatedSection>
           <SectionHeading
             title="Resultados antes y después"
-            subtitle="Transformaciones reales de nuestras clientas. Resultados naturales que hablan por sí solos."
+            subtitle="Desliza la línea para comparar el antes y el después. Resultados reales de nuestras clientas."
           />
         </AnimatedSection>
 
@@ -43,46 +45,43 @@ export default function Results() {
               <AnimatedSection
                 key={item.id}
                 delay={index * 0.08}
-                className="snap-center shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[380px]"
+                className={`snap-center shrink-0 ${
+                  item.type === 'comparison'
+                    ? 'w-[88vw] sm:w-[75vw] md:w-[420px]'
+                    : 'w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[340px]'
+                }`}
               >
                 <div className="premium-card overflow-hidden">
-                  {item.type === 'image' && item.before && item.after ? (
-                    <div className="grid grid-cols-2">
-                      <div className="relative">
-                        <img
-                          src={item.before}
-                          alt={`Antes - ${item.title}`}
-                          loading="lazy"
-                          className="w-full h-64 object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-velvet-black/70 text-white text-xs px-2 py-1 rounded">
-                          Antes
-                        </span>
-                      </div>
-                      <div className="relative">
-                        <img
-                          src={item.after}
-                          alt={`Después - ${item.title}`}
-                          loading="lazy"
-                          className="w-full h-64 object-cover"
-                        />
-                        <span className="absolute bottom-2 left-2 bg-velvet-gold text-white text-xs px-2 py-1 rounded">
-                          Después
-                        </span>
-                      </div>
-                    </div>
-                  ) : (
+                  {item.type === 'comparison' ? (
+                    <BeforeAfterSlider
+                      title={item.title}
+                      before={item.splitImage ?? item.before ?? ''}
+                      after={item.splitImage ? undefined : item.after}
+                      imageFocus={item.imageFocus ?? 'profile'}
+                    />
+                  ) : item.type === 'showcase' && item.src ? (
                     <div className="relative">
-                      <video
+                      <img
                         src={item.src}
-                        poster={item.poster}
-                        controls
-                        playsInline
-                        preload="metadata"
-                        className="w-full h-64 object-cover bg-velvet-black"
+                        alt={item.title}
+                        loading="lazy"
+                        className={`w-full h-80 object-cover bg-velvet-beige ${getImageFocusClass(item.imageFocus ?? 'lips')}`}
                       />
+                      <span className="absolute top-3 right-3 bg-velvet-gold text-white text-xs px-2.5 py-1 rounded-full tracking-wide">
+                        Resultado real
+                      </span>
                     </div>
-                  )}
+                  ) : item.type === 'video' && item.src ? (
+                    <video
+                      src={item.src}
+                      poster={item.poster}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-80 object-cover bg-velvet-black"
+                    />
+                  ) : null}
+
                   <p className="p-4 text-center font-display text-lg text-velvet-black">
                     {item.title}
                   </p>
