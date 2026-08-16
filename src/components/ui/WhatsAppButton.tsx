@@ -8,6 +8,7 @@ interface WhatsAppButtonProps {
   variant?: ButtonVariant
   className?: string
   showIcon?: boolean
+  message?: string
 }
 
 export default function WhatsAppButton({
@@ -15,12 +16,16 @@ export default function WhatsAppButton({
   variant = 'primary',
   className = '',
   showIcon = true,
+  message,
 }: WhatsAppButtonProps) {
   const baseClass = variant === 'gold' ? 'btn-whatsapp-gold' : 'btn-whatsapp'
+  const targetUrl = message
+    ? `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`
+    : WHATSAPP_URL
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={targetUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={`${baseClass} ${className}`}

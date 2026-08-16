@@ -18,7 +18,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="section-padding">
+    <section id="testimonios" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <SectionHeading

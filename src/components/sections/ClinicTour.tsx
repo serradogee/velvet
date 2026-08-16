@@ -9,7 +9,7 @@ export default function ClinicTour() {
   const [activeVideo, setActiveVideo] = useState(0)
 
   return (
-    <section className="section-padding">
+    <section id="clinica" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <SectionHeading

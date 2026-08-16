@@ -2,8 +2,12 @@ export interface Treatment {
   id: string
   emoji: string
   title: string
+  subtitle?: string
+  category?: 'labios' | 'micropigmentacion' | 'facial' | 'personalizado'
+  tag?: string
   description: string
   benefits: string[]
+  duration?: string
   image: string
   /** Enfoque de la imagen: lips, center, profile */
   imageFocus?: 'lips' | 'center' | 'profile'
