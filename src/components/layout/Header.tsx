@@ -8,8 +8,6 @@ const navLinks = [
   { label: 'Sobre mí', to: '/#sobre-mi' },
   { label: 'Tratamientos', to: '/tratamientos' },
   { label: 'Resultados', to: '/resultados' },
-  { label: 'La Clínica', to: '/#clinica' },
-  { label: 'Opiniones', to: '/#testimonios' },
 ]
 
 export default function Header() {
