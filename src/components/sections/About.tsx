@@ -33,14 +33,14 @@ export default function About() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-40 lg:pb-36">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* ── LEFT: Portrait ── */}
-          <AnimatedSection className="relative order-2 lg:order-1">
+          {/* ── LEFT: Portrait (Primero en móvil y a la izquierda en desktop) ── */}
+          <AnimatedSection className="relative order-1 lg:order-1">
             {/* Gold corner accent top-left */}
             <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-velvet-gold/50 z-10" />
             {/* Gold corner accent bottom-right */}
             <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-velvet-gold/50 z-10" />
 
-            <div className="relative overflow-hidden rounded-sm">
+            <div className="relative overflow-hidden rounded-sm max-w-md mx-auto lg:max-w-none">
               {/* Subtle gold overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
               <img
@@ -65,8 +65,8 @@ export default function About() {
             </div>
           </AnimatedSection>
 
-          {/* ── RIGHT: Bio text ── */}
-          <div className="order-1 lg:order-2 text-white">
+          {/* ── RIGHT: Bio text (Segundo en móvil y a la derecha en desktop) ── */}
+          <div className="order-2 lg:order-2 text-white">
             {/* Gold line + label */}
             <AnimatedSection>
               <div className="flex items-center gap-3 mb-6">

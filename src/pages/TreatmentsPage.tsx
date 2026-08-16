@@ -69,8 +69,8 @@ export default function TreatmentsPage() {
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
-              {/* Text / Phrase Column (Left) */}
-              <div className="lg:col-span-7">
+              {/* Text / Phrase Column (Segundo en móvil, Izquierda en desktop) */}
+              <div className="order-2 lg:order-1 lg:col-span-7">
                 <AnimatedSection>
                   {/* Breadcrumb / Top label */}
                   <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-velvet-gold/30 text-xs font-light text-velvet-gold mb-6">
@@ -127,8 +127,8 @@ export default function TreatmentsPage() {
                 </AnimatedSection>
               </div>
 
-              {/* Photo Column (Right) */}
-              <div className="lg:col-span-5">
+              {/* Photo Column (Primero en móvil, Derecha en desktop) */}
+              <div className="order-1 lg:order-2 lg:col-span-5">
                 <AnimatedSection delay={0.2} className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Corner accents */}
                   <div className="absolute -top-3 -left-3 w-12 h-12 border-t-2 border-l-2 border-velvet-gold/50 z-10" />
