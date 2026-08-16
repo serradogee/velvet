@@ -3,7 +3,6 @@ import Footer from '../components/layout/Footer'
 import FloatingWhatsApp from '../components/layout/FloatingWhatsApp'
 import About from '../components/sections/About'
 import Advisory from '../components/sections/Advisory'
-import Results from '../components/sections/Results'
 import ClinicTour from '../components/sections/ClinicTour'
 import Trust from '../components/sections/Trust'
 import Testimonials from '../components/sections/Testimonials'
@@ -16,7 +15,6 @@ export default function LandingPage() {
       <main>
         <About />
         <Advisory />
-        <Results />
         <ClinicTour />
         <Trust />
         <Testimonials />

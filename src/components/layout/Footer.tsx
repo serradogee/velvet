@@ -29,7 +29,7 @@ export default function Footer() {
             Tratamientos
           </Link>
           <span className="text-white/20">·</span>
-          <Link to="/#resultados" className="text-white/60 hover:text-velvet-gold transition-colors">
+          <Link to="/resultados" className="text-white/60 hover:text-velvet-gold transition-colors">
             Resultados
           </Link>
           <span className="text-white/20">·</span>

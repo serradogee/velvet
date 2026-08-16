@@ -5,18 +5,16 @@ import { LOCATION } from '../../config/site'
 import Logo from '../ui/Logo'
 
 const navLinks = [
-  { label: 'Sobre mí', to: '/#sobre-mi', isPage: false },
-  { label: 'Tratamientos', to: '/tratamientos', isPage: true },
-  { label: 'Resultados', to: '/#resultados', isPage: false },
-  { label: 'La Clínica', to: '/#clinica', isPage: false },
-  { label: 'Opiniones', to: '/#testimonios', isPage: false },
+  { label: 'Sobre mí', to: '/#sobre-mi' },
+  { label: 'Tratamientos', to: '/tratamientos' },
+  { label: 'Resultados', to: '/resultados' },
+  { label: 'La Clínica', to: '/#clinica' },
+  { label: 'Opiniones', to: '/#testimonios' },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
-
-  const isTratamientos = location.pathname === '/tratamientos'
 
   const handleNavClick = (to: string) => {
     setMobileMenuOpen(false)
@@ -31,6 +29,13 @@ export default function Header() {
     }
   }
 
+  const isLinkActive = (to: string) => {
+    if (to === '/tratamientos' && location.pathname === '/tratamientos') return true
+    if (to === '/resultados' && location.pathname === '/resultados') return true
+    if (to === '/#sobre-mi' && location.pathname === '/') return true
+    return false
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-black/85 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-5 py-3 md:px-8 md:py-4 flex items-center justify-between">
@@ -42,9 +47,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7 lg:gap-9">
           {navLinks.map((link) => {
-            const isActive = link.isPage
-              ? (link.to === '/tratamientos' && isTratamientos)
-              : (!isTratamientos && link.to === '/#sobre-mi')
+            const active = isLinkActive(link.to)
 
             return (
               <Link
@@ -52,13 +55,13 @@ export default function Header() {
                 to={link.to}
                 onClick={() => handleNavClick(link.to)}
                 className={`text-xs tracking-[0.2em] uppercase transition-all duration-300 font-medium relative py-1 ${
-                  isActive
+                  active
                     ? 'text-velvet-gold font-semibold'
                     : 'text-white/70 hover:text-velvet-gold'
                 }`}
               >
                 {link.label}
-                {isActive && (
+                {active && (
                   <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-velvet-gold rounded-full" />
                 )}
               </Link>
@@ -95,9 +98,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-black/95 border-b border-white/10 px-6 py-6 space-y-4 backdrop-blur-xl animate-fadeIn">
           {navLinks.map((link) => {
-            const isActive = link.isPage
-              ? (link.to === '/tratamientos' && isTratamientos)
-              : (!isTratamientos && link.to === '/#sobre-mi')
+            const active = isLinkActive(link.to)
 
             return (
               <Link
@@ -105,7 +106,7 @@ export default function Header() {
                 to={link.to}
                 onClick={() => handleNavClick(link.to)}
                 className={`block text-sm tracking-[0.2em] uppercase py-2 border-b border-white/5 transition-colors ${
-                  isActive
+                  active
                     ? 'text-velvet-gold font-semibold'
                     : 'text-white/75 hover:text-velvet-gold'
                 }`}
