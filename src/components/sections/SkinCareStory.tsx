@@ -18,7 +18,7 @@ export default function SkinCareStory() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
-                  <p className="text-velvet-gold text-xs tracking-[0.25em] uppercase font-semibold mb-1">
+                  <p className="text-white/80 text-xs tracking-[0.25em] uppercase font-semibold mb-1">
                     Tratamientos Faciales
                   </p>
                   <p className="font-display text-xl font-medium">
@@ -36,7 +36,7 @@ export default function SkinCareStory() {
                 <p className="text-black font-display text-2xl sm:text-3xl font-bold tracking-tight uppercase">
                   VELVET CLINIC SKIN & BEAUTY
                 </p>
-                <p className="text-velvet-gold text-xs tracking-[0.2em] uppercase font-semibold mt-1">
+                <p className="text-zinc-600 text-xs tracking-[0.2em] uppercase font-semibold mt-1">
                   Filosofía del cuidado médico
                 </p>
               </div>

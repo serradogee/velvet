@@ -5,11 +5,11 @@
 @theme {
   --color-velvet-cream: #FAF8F5;
   --color-velvet-beige: #E8DFD4;
-  --color-velvet-black: #0A0A0B;
+  --color-velvet-black: #000000;
   --color-velvet-charcoal: #18181A;
-  --color-velvet-gold: #A17A27;
-  --color-velvet-gold-light: #C9A962;
-  --color-velvet-gold-dark: #8C671E;
+  --color-velvet-gold: #FFFFFF;
+  --color-velvet-gold-light: #F4F4F5;
+  --color-velvet-gold-dark: #27272A;
 
   --font-display: 'Raleway', sans-serif;
   --font-raleway: 'Raleway', sans-serif;
@@ -24,7 +24,7 @@
   }
 
   body {
-    @apply font-body antialiased bg-black text-white selection:bg-velvet-gold/30 selection:text-white;
+    @apply font-body antialiased bg-black text-white selection:bg-white/20 selection:text-white;
   }
 }
 
@@ -38,27 +38,31 @@
   }
 
   .gold-line {
-    @apply h-px w-16 bg-velvet-gold mx-auto;
+    @apply h-px w-16 bg-white/30 mx-auto;
   }
 
   .premium-card {
-    @apply bg-[#18181A]/80 backdrop-blur-sm border border-white/10 rounded-2xl transition-all duration-500 hover:border-velvet-gold/50;
+    @apply bg-[#18181A]/80 backdrop-blur-sm border border-white/10 rounded-2xl transition-all duration-500 hover:border-white/30;
   }
 
   .btn-pill-light {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-white bg-transparent px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black active:scale-[0.98];
   }
 
+  .btn-pill-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-black bg-transparent px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-black transition-all duration-300 hover:bg-black hover:text-white active:scale-[0.98];
+  }
+
   .btn-pill-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-velvet-gold bg-transparent px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-velvet-gold transition-all duration-300 hover:bg-velvet-gold hover:text-white active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/5 px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black active:scale-[0.98];
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-[0.98];
   }
 
   .btn-whatsapp-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-velvet-gold bg-velvet-gold/15 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-velvet-gold hover:text-black active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black active:scale-[0.98];
   }
 
   .scrollbar-hide {

@@ -21,7 +21,7 @@ export default function WhyVelvet() {
           <div className="lg:col-span-7 order-2 lg:order-1">
             <AnimatedSection>
               <div className="mb-3">
-                <span className="text-velvet-gold text-xs tracking-[0.25em] uppercase font-bold">
+                <span className="text-zinc-900 text-xs tracking-[0.25em] uppercase font-bold">
                   VELVET CLINIC EXCLUSIVE
                 </span>
               </div>
@@ -43,9 +43,9 @@ export default function WhyVelvet() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.08 * index }}
-                    className="flex items-start gap-3 bg-zinc-50 border border-zinc-200/80 rounded-lg p-3.5 hover:border-velvet-gold/60 transition-colors shadow-sm"
+                    className="flex items-start gap-3 bg-zinc-50 border border-zinc-200/80 rounded-lg p-3.5 hover:border-black/40 transition-colors shadow-sm"
                   >
-                    <span className="text-velvet-gold text-base shrink-0 leading-none mt-0.5 font-bold">
+                    <span className="text-black text-base shrink-0 leading-none mt-0.5 font-bold">
                       ✔️
                     </span>
                     <span className="text-zinc-800 text-xs sm:text-sm font-medium">
@@ -69,10 +69,6 @@ export default function WhyVelvet() {
           {/* RIGHT: Image showcase */}
           <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
             <AnimatedSection delay={0.2} className="relative w-full max-w-[400px]">
-              {/* Corner gold accents */}
-              <div className="absolute -top-3 -left-3 w-12 h-12 border-t-2 border-l-2 border-velvet-gold z-10" />
-              <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-2 border-r-2 border-velvet-gold z-10" />
-
               <div className="relative rounded-2xl overflow-hidden border border-zinc-200 shadow-xl bg-zinc-100">
                 <img
                   src="/images/jennyfer-tratamientos.jpg"
@@ -83,8 +79,8 @@ export default function WhyVelvet() {
 
                 {/* Bottom badge */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-black/85 backdrop-blur-md border border-velvet-gold/40 px-5 py-3.5 rounded-lg text-white">
-                    <p className="text-velvet-gold text-[10px] tracking-[0.25em] uppercase font-semibold">
+                  <div className="bg-black/85 backdrop-blur-md border border-white/20 px-5 py-3.5 rounded-lg text-white">
+                    <p className="text-white/80 text-[10px] tracking-[0.25em] uppercase font-semibold">
                       Garantía & Excelencia
                     </p>
                     <p className="text-white font-display text-lg font-medium">

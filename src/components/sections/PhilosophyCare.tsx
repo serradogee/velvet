@@ -43,7 +43,7 @@ export default function PhilosophyCare() {
             VELVET CLINIC CARE
           </h2>
           <p className="text-white/80 font-display italic text-base sm:text-lg lg:text-xl font-light tracking-wide">
-            Nuestra <em className="text-velvet-gold not-italic font-medium">filosofía</em> del cuidado de la piel y tratamientos
+            Nuestra <em className="text-white not-italic font-medium underline decoration-white/40 underline-offset-4">filosofía</em> del cuidado de la piel y tratamientos
           </p>
         </AnimatedSection>
 
@@ -51,7 +51,7 @@ export default function PhilosophyCare() {
         <AnimatedSection delay={0.1} className="text-center mb-16 lg:mb-20">
           <Link
             to="/tratamientos"
-            className="btn-pill-light hover:!border-velvet-gold hover:!text-velvet-gold hover:!bg-transparent shadow-lg"
+            className="btn-pill-light hover:!bg-white hover:!text-black shadow-lg"
           >
             Descubre todos los tratamientos
           </Link>
@@ -64,7 +64,7 @@ export default function PhilosophyCare() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-black/75 backdrop-blur-md border border-white/15 rounded-2xl overflow-hidden group hover:border-velvet-gold/60 transition-all duration-300 flex flex-col h-full shadow-2xl"
+                className="bg-black/75 backdrop-blur-md border border-white/15 rounded-2xl overflow-hidden group hover:border-white/40 transition-all duration-300 flex flex-col h-full shadow-2xl"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-black">
@@ -74,14 +74,14 @@ export default function PhilosophyCare() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80" />
-                  <span className="absolute top-3 right-3 bg-black/80 backdrop-blur-md border border-white/20 text-[10px] tracking-[0.2em] uppercase font-semibold text-velvet-gold px-3 py-1 rounded-full">
+                  <span className="absolute top-3 right-3 bg-black/80 backdrop-blur-md border border-white/20 text-[10px] tracking-[0.2em] uppercase font-semibold text-white px-3 py-1 rounded-full">
                     {item.badge}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 sm:p-7 flex flex-col flex-grow text-center">
-                  <h3 className="text-white font-display text-lg sm:text-xl font-semibold mb-2.5 group-hover:text-velvet-gold transition-colors">
+                  <h3 className="text-white font-display text-lg sm:text-xl font-semibold mb-2.5 group-hover:text-white/80 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-white/70 text-xs sm:text-sm font-light leading-relaxed mb-4">

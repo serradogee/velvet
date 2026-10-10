@@ -63,13 +63,13 @@ export default function Header() {
                   onClick={() => handleNavClick(link.to)}
                   className={`text-xs tracking-[0.22em] uppercase transition-all duration-300 font-medium relative py-1 ${
                     active
-                      ? 'text-velvet-gold font-semibold'
-                      : 'text-white/80 hover:text-velvet-gold'
+                      ? 'text-white font-semibold'
+                      : 'text-white/70 hover:text-white'
                   }`}
                 >
                   {link.label}
                   {active && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-velvet-gold rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white rounded-full" />
                   )}
                 </Link>
               )
@@ -82,10 +82,10 @@ export default function Header() {
               href={LOCATION.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-light text-white/85 hover:text-velvet-gold transition-colors bg-white/5 px-3.5 py-1.5 rounded-full border border-white/15 hover:border-velvet-gold/50"
+              className="flex items-center gap-1.5 text-xs font-light text-white/85 hover:text-white transition-colors bg-white/5 px-3.5 py-1.5 rounded-full border border-white/15 hover:border-white/40"
               title="Ver ubicación en Google Maps"
             >
-              <MapPin className="w-3.5 h-3.5 text-velvet-gold shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-white/80 shrink-0" />
               <span className="hidden sm:inline">{LOCATION.full}</span>
               <span className="sm:hidden">Madrid</span>
             </a>
@@ -93,7 +93,7 @@ export default function Header() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 text-white/80 hover:text-velvet-gold transition-colors"
+              className="md:hidden p-1.5 text-white/80 hover:text-white transition-colors"
               aria-label="Abrir menú de navegación"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -114,8 +114,8 @@ export default function Header() {
                   onClick={() => handleNavClick(link.to)}
                   className={`block text-sm tracking-[0.2em] uppercase py-2 border-b border-white/5 transition-colors ${
                     active
-                      ? 'text-velvet-gold font-semibold'
-                      : 'text-white/80 hover:text-velvet-gold'
+                      ? 'text-white font-semibold'
+                      : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {link.label}

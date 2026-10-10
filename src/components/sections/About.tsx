@@ -15,7 +15,7 @@ export default function About() {
             Conoce la técnica y esencia de
           </p>
           <h1 className="text-white font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight uppercase">
-            VELVET CLINIC<span className="text-velvet-gold">™</span>
+            VELVET CLINIC™
           </h1>
         </AnimatedSection>
 
@@ -30,7 +30,7 @@ export default function About() {
                   Especialistas en armonización facial |
                 </p>
                 <p className="text-white font-display text-sm sm:text-base tracking-[0.15em] uppercase font-semibold">
-                  Creadores de la técnica <span className="text-velvet-gold font-bold">ICONIC™ RUSSIAN LIPS™</span>
+                  Creadores de la técnica <span className="text-white font-bold underline decoration-white/40 underline-offset-4">ICONIC™ RUSSIAN LIPS™</span>
                 </p>
               </div>
 
@@ -46,7 +46,7 @@ export default function About() {
                   Nuestro camino en el mundo de la belleza nació de una auténtica pasión por <strong className="text-white font-medium">el arte sobre la piel</strong>. Con el tiempo y una formación internacional continua, descubrimos que la excelencia radica en encontrar el perfecto equilibrio entre técnica, precisión anatómica y máxima naturalidad.
                 </p>
                 <p>
-                  A través de <strong className="text-velvet-gold font-medium">ICONIC™ Russian Lips™</strong>, desarrollamos un método propio para conseguir unos labios definidos, elevados y armoniosos, perfectamente integrados con las facciones de cada persona.
+                  A través de <strong className="text-white font-medium">ICONIC™ Russian Lips™</strong>, desarrollamos un método propio para conseguir unos labios definidos, elevados y armoniosos, perfectamente integrados con las facciones de cada persona.
                 </p>
                 <p>
                   En Velvet Clinic cada tratamiento parte de un diagnóstico exhaustivo e individualizado bajo una misma premisa: <strong className="text-white font-medium">potenciar tu belleza sin perder tu esencia</strong>.
@@ -54,7 +54,7 @@ export default function About() {
               </div>
 
               {/* Quote Highlight */}
-              <blockquote className="border-l-2 border-velvet-gold pl-5 py-2 mb-10 bg-white/[0.02] rounded-r-md">
+              <blockquote className="border-l-2 border-white/60 pl-5 py-2 mb-10 bg-white/[0.03] rounded-r-md">
                 <p className="text-white/90 text-base sm:text-lg italic font-light leading-relaxed">
                   &ldquo;La verdadera estética avanzada no transforma quién eres, resalta tu mejor versión con armonía y elegancia.&rdquo;
                 </p>
@@ -68,7 +68,7 @@ export default function About() {
                 />
                 <Link
                   to="/tratamientos"
-                  className="btn-pill-gold text-center"
+                  className="btn-pill-light !bg-white !text-black !border-white hover:!bg-transparent hover:!text-white text-center"
                 >
                   Ver todos los tratamientos
                 </Link>
@@ -90,7 +90,7 @@ export default function About() {
 
                 {/* Bottom Overlay Badge */}
                 <div className="absolute bottom-8 left-0 right-0 text-center px-6">
-                  <p className="text-velvet-gold text-[11px] tracking-[0.25em] uppercase font-semibold">
+                  <p className="text-white/80 text-[11px] tracking-[0.25em] uppercase font-semibold">
                     Clínica Estética Avanzada
                   </p>
                   <p className="text-white font-display text-xl font-medium mt-0.5">
