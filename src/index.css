@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&display=swap');
 
 @import "tailwindcss";
 
 @theme {
   --color-velvet-cream: #FAF8F5;
   --color-velvet-beige: #E8DFD4;
-  --color-velvet-beige-dark: #D4C4B0;
-  --color-velvet-black: #1A1A1A;
-  --color-velvet-charcoal: #2C2C2C;
-  --color-velvet-gold: #C9A962;
-  --color-velvet-gold-light: #D4B87A;
+  --color-velvet-black: #0A0A0B;
+  --color-velvet-charcoal: #18181A;
+  --color-velvet-gold: #A17A27;
+  --color-velvet-gold-light: #C9A962;
+  --color-velvet-gold-dark: #8C671E;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Raleway', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-body: 'Raleway', 'Montserrat', 'Inter', system-ui, sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
 }
 
 @layer base {
@@ -21,11 +24,7 @@
   }
 
   body {
-    @apply font-body antialiased bg-velvet-cream text-velvet-black;
-  }
-
-  ::selection {
-    @apply bg-velvet-gold/30 text-velvet-black;
+    @apply font-body antialiased bg-black text-white selection:bg-velvet-gold/30 selection:text-white;
   }
 }
 
@@ -35,7 +34,7 @@
   }
 
   .display-heading {
-    @apply font-display font-semibold tracking-tight text-velvet-black;
+    @apply font-display font-semibold tracking-tight text-white;
   }
 
   .gold-line {
@@ -43,19 +42,23 @@
   }
 
   .premium-card {
-    @apply bg-white/80 backdrop-blur-sm border border-velvet-beige/60 rounded-2xl shadow-[0_8px_40px_rgba(26,26,26,0.06)] transition-all duration-500;
+    @apply bg-[#18181A]/80 backdrop-blur-sm border border-white/10 rounded-2xl transition-all duration-500 hover:border-velvet-gold/50;
   }
 
-  .premium-card:hover {
-    @apply shadow-[0_16px_60px_rgba(26,26,26,0.1)] border-velvet-gold/30;
+  .btn-pill-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white bg-transparent px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black active:scale-[0.98];
+  }
+
+  .btn-pill-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-velvet-gold bg-transparent px-8 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-velvet-gold transition-all duration-300 hover:bg-velvet-gold hover:text-white active:scale-[0.98];
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-velvet-black px-6 py-3.5 text-sm font-medium tracking-wide text-white transition-all duration-300 hover:bg-velvet-charcoal hover:shadow-[0_8px_30px_rgba(26,26,26,0.25)] active:scale-[0.98] md:px-8 md:py-4 md:text-base;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white active:scale-[0.98];
   }
 
   .btn-whatsapp-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-velvet-gold bg-velvet-gold/10 px-6 py-3.5 text-sm font-medium tracking-wide text-velvet-black transition-all duration-300 hover:bg-velvet-gold hover:text-white hover:shadow-[0_8px_30px_rgba(201,169,98,0.35)] active:scale-[0.98] md:px-8 md:py-4 md:text-base;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-velvet-gold bg-velvet-gold/15 backdrop-blur-md px-6 py-3.5 text-xs font-medium tracking-[0.15em] uppercase text-white transition-all duration-300 hover:bg-velvet-gold hover:text-black active:scale-[0.98];
   }
 
   .scrollbar-hide {

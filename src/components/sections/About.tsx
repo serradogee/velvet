@@ -1,150 +1,111 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import AnimatedSection from '../ui/AnimatedSection'
 import WhatsAppButton from '../ui/WhatsAppButton'
-
-const specialties = [
-  { icon: '💋', label: 'ICONIC™ Russian Lips', desc: 'Creadores de la técnica' },
-  { icon: '✨', label: 'Armonización Facial', desc: 'Medicina estética avanzada' },
-  { icon: '🎨', label: 'Micropigmentación Realista', desc: 'Brows · Lips · Freckles · Blush' },
-]
-
-const bioParagraphs = [
-  'Nuestro camino en el mundo de la belleza y la estética nació de nuestra pasión por realzar la belleza natural y ayudar a cada persona a sentirse más segura de sí misma.',
-  'Con el tiempo descubrimos que la estética era mucho más que transformar una imagen: era encontrar el equilibrio entre técnica, precisión y naturalidad.',
-  'A través de ICONIC™ Russian Lips, desarrollamos una visión propia de los labios, buscando una forma definida, equilibrada y adaptada a cada rostro.',
-  'Así nació Velvet Clinic, un espacio dedicado a la medicina estética avanzada, donde cada tratamiento parte de un estudio personalizado y de una misma filosofía: potenciar tu belleza sin perder tu esencia.',
-]
 
 export default function About() {
   return (
     <section
       id="sobre-nosotros"
-      className="relative bg-black overflow-hidden"
+      className="relative bg-black text-white pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden border-b border-white/10"
     >
-      {/* Decorative background texture */}
-      <div className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px',
-        }}
-      />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        {/* ── TOP HEADLINE (Guilty Freckles style) ── */}
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <p className="text-white/70 font-display text-xl sm:text-2xl md:text-3xl uppercase tracking-[0.15em] mb-2">
+            Conoce la técnica y esencia de
+          </p>
+          <h1 className="text-white font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight uppercase">
+            VELVET CLINIC<span className="text-velvet-gold">™</span>
+          </h1>
+        </AnimatedSection>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-40 lg:pb-36">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-          {/* ── LEFT: Portrait (Primero en móvil y a la izquierda en desktop) ── */}
-          <AnimatedSection className="relative order-1 lg:order-1">
-            {/* Gold corner accent top-left */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-velvet-gold/50 z-10" />
-            {/* Gold corner accent bottom-right */}
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-velvet-gold/50 z-10" />
-
-            <div className="relative overflow-hidden rounded-sm max-w-md mx-auto lg:max-w-none">
-              {/* Subtle gold overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
-              <img
-                src="/images/jennyfer-sobre-mi.jpg"
-                alt="Velvet Clinic"
-                className="w-full aspect-[3/4] object-cover object-top"
-              />
-              {/* Name badge over photo */}
-              <div className="absolute bottom-6 left-6 right-6 z-20">
-                <div className="bg-black/70 backdrop-blur-md border border-velvet-gold/30 px-5 py-4 rounded-sm">
-                  <p className="text-velvet-gold text-xs tracking-[0.3em] uppercase font-medium mb-1">
-                    Equipo & Dirección
-                  </p>
-                  <p className="text-white font-display text-2xl font-semibold">
-                    Velvet Clinic
-                  </p>
-                  <p className="text-white/50 text-xs mt-1 tracking-wide">
-                    Madrid
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* ── RIGHT: Bio text (Segundo en móvil y a la derecha en desktop) ── */}
-          <div className="order-2 lg:order-2 text-white">
-            {/* Gold line + label */}
+        {/* ── 2-COLUMN GRID (Bio Left + Oval Image Right) ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* LEFT: Bio & Presentation */}
+          <div className="lg:col-span-7 order-2 lg:order-1">
             <AnimatedSection>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-velvet-gold" />
-                <span className="text-velvet-gold text-xs tracking-[0.3em] uppercase font-medium">
-                  Sobre nosotros
-                </span>
+              <div className="mb-4">
+                <p className="text-white/80 font-display text-sm sm:text-base tracking-[0.15em] uppercase">
+                  Especialistas en armonización facial |
+                </p>
+                <p className="text-white font-display text-sm sm:text-base tracking-[0.15em] uppercase font-semibold">
+                  Creadores de la técnica <span className="text-velvet-gold font-bold">ICONIC™ RUSSIAN LIPS™</span>
+                </p>
               </div>
 
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] mb-4">
-                Somos
-                <br />
-                <em className="not-italic text-velvet-gold">Velvet Clinic</em>
+              <h2 className="text-white font-display text-4xl sm:text-5xl font-light tracking-tight mb-8">
+                Velvet Clinic
               </h2>
 
-              <p className="text-white/50 text-sm md:text-base font-light leading-relaxed mb-8 max-w-lg">
-                Equipo Velvet Clinic · Creadores de{' '}
-                <span className="text-velvet-gold font-medium">ICONIC™ Russian Lips</span>{' '}
-                · Especialistas en medicina estética avanzada, armonización facial
-                y micropigmentación realista.
-              </p>
-            </AnimatedSection>
-
-            {/* Bio paragraphs */}
-            <div className="space-y-5 mb-10">
-              {bioParagraphs.map((para, i) => (
-                <AnimatedSection key={i} delay={0.1 + i * 0.08}>
-                  <p className="text-white/65 text-sm md:text-base font-light leading-relaxed border-l border-velvet-gold/20 pl-4">
-                    {para}
-                  </p>
-                </AnimatedSection>
-              ))}
-            </div>
-
-            {/* Specialty badges */}
-            <AnimatedSection delay={0.5}>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
-                {specialties.map((s) => (
-                  <motion.div
-                    key={s.label}
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.25 }}
-                    className="bg-white/5 border border-white/10 hover:border-velvet-gold/40 rounded-sm p-4 text-center transition-colors duration-300"
-                  >
-                    <span className="text-2xl mb-2 block">{s.icon}</span>
-                    <p className="text-white text-xs font-medium tracking-wide leading-tight mb-1">
-                      {s.label}
-                    </p>
-                    <p className="text-white/40 text-[10px] tracking-wide uppercase">
-                      {s.desc}
-                    </p>
-                  </motion.div>
-                ))}
+              <div className="space-y-5 text-white/75 text-sm sm:text-base font-light leading-relaxed mb-10">
+                <p>
+                  Somos <strong className="text-white font-medium">Velvet Clinic</strong>, un equipo referente en medicina estética avanzada y micropigmentación realista en Madrid, dedicados a transformar y cuidar la imagen personal desde la sutileza y el rigor médico.
+                </p>
+                <p>
+                  Nuestro camino en el mundo de la belleza nació de una auténtica pasión por <strong className="text-white font-medium">el arte sobre la piel</strong>. Con el tiempo y una formación internacional continua, descubrimos que la excelencia radica en encontrar el perfecto equilibrio entre técnica, precisión anatómica y máxima naturalidad.
+                </p>
+                <p>
+                  A través de <strong className="text-velvet-gold font-medium">ICONIC™ Russian Lips™</strong>, desarrollamos un método propio para conseguir unos labios definidos, elevados y armoniosos, perfectamente integrados con las facciones de cada persona.
+                </p>
+                <p>
+                  En Velvet Clinic cada tratamiento parte de un diagnóstico exhaustivo e individualizado bajo una misma premisa: <strong className="text-white font-medium">potenciar tu belleza sin perder tu esencia</strong>.
+                </p>
               </div>
-            </AnimatedSection>
 
-            {/* CTA */}
-            <AnimatedSection delay={0.6}>
-              <div className="flex flex-col sm:flex-row items-start gap-4">
+              {/* Quote Highlight */}
+              <blockquote className="border-l-2 border-velvet-gold pl-5 py-2 mb-10 bg-white/[0.02] rounded-r-md">
+                <p className="text-white/90 text-base sm:text-lg italic font-light leading-relaxed">
+                  &ldquo;La verdadera estética avanzada no transforma quién eres, resalta tu mejor versión con armonía y elegancia.&rdquo;
+                </p>
+              </blockquote>
+
+              {/* CTA Buttons (Pill styling) */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <WhatsAppButton
-                  label="Reserva tu cita →"
-                  className="!bg-velvet-gold !text-white !border-velvet-gold hover:!bg-white hover:!text-black"
+                  label="Reservar cita en Madrid"
+                  className="btn-pill-light !bg-transparent !border-white hover:!bg-white hover:!text-black"
                 />
                 <Link
                   to="/tratamientos"
-                  className="inline-flex items-center gap-2 text-white/50 text-sm font-light tracking-wide hover:text-velvet-gold transition-colors pt-3 sm:pt-3.5"
+                  className="btn-pill-gold text-center"
                 >
-                  Ver tratamientos
-                  <span className="h-px w-6 bg-current" />
+                  Ver todos los tratamientos
                 </Link>
               </div>
             </AnimatedSection>
           </div>
+
+          {/* RIGHT: Signature Oval Frame (Guilty Freckles oval mask) */}
+          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+            <AnimatedSection delay={0.2} className="relative w-full max-w-[340px] sm:max-w-[400px]">
+              {/* Oval Image Container */}
+              <div className="relative w-full aspect-[3/4.2] rounded-[196px] overflow-hidden border border-white/20 shadow-2xl bg-zinc-950 group">
+                <img
+                  src="/images/jennyfer-sobre-mi.jpg"
+                  alt="Velvet Clinic — Medicina Estética Avanzada"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+                {/* Bottom Overlay Badge */}
+                <div className="absolute bottom-8 left-0 right-0 text-center px-6">
+                  <p className="text-velvet-gold text-[11px] tracking-[0.25em] uppercase font-semibold">
+                    Clínica Estética Avanzada
+                  </p>
+                  <p className="text-white font-display text-xl font-medium mt-0.5">
+                    Velvet Clinic
+                  </p>
+                  <p className="text-white/50 text-xs tracking-wider mt-1">
+                    Plaza de Matute 5 · Madrid
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+
         </div>
       </div>
-
-      {/* Bottom gold separator line */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-velvet-gold/30 to-transparent" />
     </section>
   )
 }
