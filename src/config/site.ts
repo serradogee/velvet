@@ -18,8 +18,8 @@ export const LOCATION = {
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Plaza+de+Matute+5+28012+Madrid',
 }
 
-/** Sustituye por tu ID real de Meta Pixel */
-export const META_PIXEL_ID = 'YOUR_META_PIXEL_ID'
+/** Meta Pixel (Facebook / Instagram Ads) */
+export const META_PIXEL_ID = '2252132862244922'
 
 /** Sustituye por tu ID real de Google Analytics */
 export const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'

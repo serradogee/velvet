@@ -16,6 +16,7 @@ export function initAnalytics() {
 
 function initMetaPixel() {
   if (META_PIXEL_ID === 'YOUR_META_PIXEL_ID') return
+  if (typeof window.fbq === 'function') return
 
   const script = document.createElement('script')
   script.innerHTML = `
