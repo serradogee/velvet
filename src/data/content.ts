@@ -58,44 +58,6 @@ export const treatments: Treatment[] = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80',
     imageFocus: 'profile',
   },
-  {
-    id: 'rejuvenecimiento-facial',
-    emoji: '💆',
-    title: 'Protocolos Faciales & Skin Boosters',
-    subtitle: 'Hidratación profunda, luminosidad y colágeno',
-    category: 'facial',
-    tag: 'Regeneración celular',
-    description:
-      'Cóctel de bioestimuladores, polinucleótidos y ácido hialurónico no reticulado para devolver la firmeza, hidratar desde las capas profundas y atenuar líneas de expresión.',
-    benefits: [
-      'Piel jugosa, elástica y con luz propia',
-      'Estimulación natural de síntesis de colágeno',
-      'Atenuación de poros y textura irregular',
-      'Efecto antienvejecimiento preventivo y correctivo',
-    ],
-    duration: '45 min',
-    image: 'https://images.unsplash.com/photo-1512290900672-1f486d34bbf3?auto=format&fit=crop&w=800&q=80',
-    imageFocus: 'center',
-  },
-  {
-    id: 'tratamientos-personalizados',
-    emoji: '✨',
-    title: 'Planes Velvet Personalizados',
-    subtitle: 'Diagnóstico 360° a tu medida',
-    category: 'personalizado',
-    tag: '100% Exclusivo',
-    description:
-      'Combinamos múltiples técnicas exclusivas en un protocolo a la medida exacta de tus objetivos y fisionomía, garantizando la máxima naturalidad y elegancia.',
-    benefits: [
-      'Estudio facial minucioso con la especialista',
-      'Combinación estratégica de volumen, color y textura',
-      'Seguimiento cercano y personalizado en cada fase',
-      'Presupuesto y planificación por etapas',
-    ],
-    duration: 'Sesión personalizada',
-    image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80',
-    imageFocus: 'center',
-  },
 ]
 
 export const results: ResultItem[] = [

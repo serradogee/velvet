@@ -10,14 +10,13 @@ import WhatsAppButton from '../components/ui/WhatsAppButton'
 import { treatments } from '../data/content'
 import { getImageFocusClass } from '../lib/imageFocus'
 
-type CategoryFilter = 'all' | 'labios' | 'micropigmentacion' | 'facial' | 'personalizado'
+type CategoryFilter = 'all' | 'labios' | 'micropigmentacion' | 'facial'
 
 const categories: { id: CategoryFilter; label: string }[] = [
   { id: 'all', label: 'Todos los tratamientos' },
   { id: 'labios', label: '💋 Labios ICONIC™' },
   { id: 'micropigmentacion', label: '🎨 Micropigmentación' },
   { id: 'facial', label: '✨ Medicina Facial' },
-  { id: 'personalizado', label: '💎 Planes a Medida' },
 ]
 
 const steps = [
