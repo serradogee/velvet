@@ -4,22 +4,22 @@ import AnimatedSection from '../ui/AnimatedSection'
 import WhatsAppButton from '../ui/WhatsAppButton'
 
 const specialties = [
-  { icon: '💋', label: 'ICONIC™ Russian Lips', desc: 'Creadora de la técnica' },
+  { icon: '💋', label: 'ICONIC™ Russian Lips', desc: 'Creadores de la técnica' },
   { icon: '✨', label: 'Armonización Facial', desc: 'Medicina estética avanzada' },
   { icon: '🎨', label: 'Micropigmentación Realista', desc: 'Brows · Lips · Freckles · Blush' },
 ]
 
 const bioParagraphs = [
-  'Mi camino en el mundo de la belleza y la estética nació de mi pasión por realzar la belleza natural y ayudar a cada persona a sentirse más segura de sí misma.',
-  'Con el tiempo descubrí que la estética era mucho más que transformar una imagen: era encontrar el equilibrio entre técnica, precisión y naturalidad.',
-  'A través de ICONIC™ Russian Lips, desarrollo una visión propia de los labios, buscando una forma definida, equilibrada y adaptada a cada rostro.',
+  'Nuestro camino en el mundo de la belleza y la estética nació de nuestra pasión por realzar la belleza natural y ayudar a cada persona a sentirse más segura de sí misma.',
+  'Con el tiempo descubrimos que la estética era mucho más que transformar una imagen: era encontrar el equilibrio entre técnica, precisión y naturalidad.',
+  'A través de ICONIC™ Russian Lips, desarrollamos una visión propia de los labios, buscando una forma definida, equilibrada y adaptada a cada rostro.',
   'Así nació Velvet Clinic, un espacio dedicado a la medicina estética avanzada, donde cada tratamiento parte de un estudio personalizado y de una misma filosofía: potenciar tu belleza sin perder tu esencia.',
 ]
 
 export default function About() {
   return (
     <section
-      id="sobre-mi"
+      id="sobre-nosotros"
       className="relative bg-black overflow-hidden"
     >
       {/* Decorative background texture */}
@@ -52,7 +52,7 @@ export default function About() {
               <div className="absolute bottom-6 left-6 right-6 z-20">
                 <div className="bg-black/70 backdrop-blur-md border border-velvet-gold/30 px-5 py-4 rounded-sm">
                   <p className="text-velvet-gold text-xs tracking-[0.3em] uppercase font-medium mb-1">
-                    Fundadora & Directora
+                    Equipo & Dirección
                   </p>
                   <p className="text-white font-display text-2xl font-semibold">
                     Velvet Clinic
@@ -72,7 +72,7 @@ export default function About() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-10 bg-velvet-gold" />
                 <span className="text-velvet-gold text-xs tracking-[0.3em] uppercase font-medium">
-                  Sobre mí
+                  Sobre nosotros
                 </span>
               </div>
 
@@ -83,9 +83,9 @@ export default function About() {
               </h2>
 
               <p className="text-white/50 text-sm md:text-base font-light leading-relaxed mb-8 max-w-lg">
-                Fundadora de Velvet Clinic · Creadora de{' '}
+                Equipo Velvet Clinic · Creadores de{' '}
                 <span className="text-velvet-gold font-medium">ICONIC™ Russian Lips</span>{' '}
-                · Especialista en medicina estética avanzada, armonización facial
+                · Especialistas en medicina estética avanzada, armonización facial
                 y micropigmentación realista.
               </p>
             </AnimatedSection>

@@ -151,7 +151,7 @@ export default function TreatmentsPage() {
                           Velvet Clinic
                         </p>
                         <p className="text-white/50 text-[11px] mt-0.5">
-                          Creadora de ICONIC™ Russian Lips
+                          Creadores de ICONIC™ Russian Lips
                         </p>
                       </div>
                     </div>
@@ -334,7 +334,7 @@ export default function TreatmentsPage() {
                   className="!bg-velvet-gold !text-black !border-velvet-gold hover:!bg-white font-medium"
                 />
                 <Link
-                  to="/#sobre-mi"
+                  to="/#sobre-nosotros"
                   className="inline-flex items-center gap-2 text-white/70 text-sm font-light hover:text-velvet-gold transition-colors py-2"
                 >
                   <span>Conocer Velvet Clinic</span>

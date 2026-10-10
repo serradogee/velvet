@@ -5,7 +5,7 @@ import { LOCATION } from '../../config/site'
 import Logo from '../ui/Logo'
 
 const navLinks = [
-  { label: 'Sobre mí', to: '/#sobre-mi' },
+  { label: 'Sobre nosotros', to: '/#sobre-nosotros' },
   { label: 'Tratamientos', to: '/tratamientos' },
   { label: 'Resultados', to: '/resultados' },
 ]
@@ -30,7 +30,7 @@ export default function Header() {
   const isLinkActive = (to: string) => {
     if (to === '/tratamientos' && location.pathname === '/tratamientos') return true
     if (to === '/resultados' && location.pathname === '/resultados') return true
-    if (to === '/#sobre-mi' && location.pathname === '/') return true
+    if ((to === '/#sobre-nosotros' || to === '/#sobre-mi') && location.pathname === '/') return true
     return false
   }
 
