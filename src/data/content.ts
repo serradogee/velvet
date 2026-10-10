@@ -5,7 +5,7 @@ export const treatments: Treatment[] = [
     id: 'labios-iconic',
     emoji: '💋',
     title: 'ICONIC™ Russian Lips',
-    subtitle: 'Técnica exclusiva creada por Jennyfer Rivera',
+    subtitle: 'Técnica exclusiva de Velvet Clinic',
     category: 'labios',
     tag: 'Firma Velvet',
     description:

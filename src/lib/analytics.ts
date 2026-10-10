@@ -15,7 +15,7 @@ export function initAnalytics() {
 }
 
 function initMetaPixel() {
-  if (META_PIXEL_ID === 'YOUR_META_PIXEL_ID') return
+  if ((META_PIXEL_ID as string) === 'YOUR_META_PIXEL_ID' || !META_PIXEL_ID) return
   if (typeof window.fbq === 'function') return
 
   const script = document.createElement('script')
@@ -35,7 +35,7 @@ function initMetaPixel() {
 }
 
 function initGoogleAnalytics() {
-  if (GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') return
+  if ((GA_MEASUREMENT_ID as string) === 'G-XXXXXXXXXX' || !GA_MEASUREMENT_ID) return
 
   const gtagScript = document.createElement('script')
   gtagScript.async = true

@@ -87,7 +87,7 @@ export default function TreatmentsPage() {
 
                   <blockquote className="relative border-l-2 border-velvet-gold pl-5 py-1 mb-8">
                     <p className="text-white/85 text-lg md:text-xl font-light italic leading-relaxed">
-                      &ldquo;Técnicas de vanguardia, precisión anatómica y la visión artística de Jennyfer Rivera para potenciar tu belleza natural con total armonía.&rdquo;
+                      &ldquo;Técnicas de vanguardia, precisión anatómica y la visión artística de Velvet Clinic para potenciar tu belleza natural con total armonía.&rdquo;
                     </p>
                   </blockquote>
 
@@ -136,7 +136,7 @@ export default function TreatmentsPage() {
                   <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-black">
                     <img
                       src="/images/jennyfer-tratamientos.jpg"
-                      alt="Jennyfer Rivera — Velvet Clinic"
+                      alt="Velvet Clinic"
                       className="w-full aspect-[3/4] object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
@@ -148,7 +148,7 @@ export default function TreatmentsPage() {
                           Dirección y Creación Técnica
                         </p>
                         <p className="text-white font-display text-lg font-medium">
-                          Jennyfer Rivera
+                          Velvet Clinic
                         </p>
                         <p className="text-white/50 text-[11px] mt-0.5">
                           Creadora de ICONIC™ Russian Lips
@@ -337,7 +337,7 @@ export default function TreatmentsPage() {
                   to="/#sobre-mi"
                   className="inline-flex items-center gap-2 text-white/70 text-sm font-light hover:text-velvet-gold transition-colors py-2"
                 >
-                  <span>Conocer a Jennyfer Rivera</span>
+                  <span>Conocer Velvet Clinic</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

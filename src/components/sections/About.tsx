@@ -45,7 +45,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
               <img
                 src="/images/jennyfer-sobre-mi.jpg"
-                alt="Jennyfer Rivera — Fundadora Velvet Clinic"
+                alt="Velvet Clinic"
                 className="w-full aspect-[3/4] object-cover object-top"
               />
               {/* Name badge over photo */}
@@ -55,10 +55,10 @@ export default function About() {
                     Fundadora & Directora
                   </p>
                   <p className="text-white font-display text-2xl font-semibold">
-                    Jennyfer Rivera
+                    Velvet Clinic
                   </p>
                   <p className="text-white/50 text-xs mt-1 tracking-wide">
-                    Velvet Clinic · Madrid
+                    Madrid
                   </p>
                 </div>
               </div>
@@ -77,9 +77,9 @@ export default function About() {
               </div>
 
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] mb-4">
-                Hola, soy
+                Somos
                 <br />
-                <em className="not-italic text-velvet-gold">Jennyfer Rivera</em>
+                <em className="not-italic text-velvet-gold">Velvet Clinic</em>
               </h2>
 
               <p className="text-white/50 text-sm md:text-base font-light leading-relaxed mb-8 max-w-lg">
