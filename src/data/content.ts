@@ -93,7 +93,7 @@ export const treatments: Treatment[] = [
       'Durabilidad estimada de 12 a 24 meses con acabado sutil',
     ],
     duration: '60 - 90 min',
-    image: '/images/resultados/resultado-cliente-03.jpg',
+    image: '/images/tratamientos/pecas-micropigmentacion.jpg',
     imageFocus: 'center',
   },
   {
@@ -112,7 +112,7 @@ export const treatments: Treatment[] = [
       'Mantenimiento cómodo y respetuoso con la pestaña natural',
     ],
     duration: '60 - 90 min',
-    image: '/images/resultados/resultado-cliente-04.jpg',
+    image: '/images/tratamientos/pestanas-lifting.jpg',
     imageFocus: 'center',
   },
 ]
