@@ -26,15 +26,15 @@ const careFeatures = [
 export default function PhilosophyCare() {
   return (
     <section className="relative py-28 md:py-36 overflow-hidden border-b border-white/10 bg-black">
-      {/* ── BACKGROUND PHOTO OF LIPS WITH LUXURY OVERLAY (Guilty Freckles style) ── */}
+      {/* ── BACKGROUND PHOTO OF LIPS (Clear and vivid, Guilty Freckles style) ── */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed scale-105"
+        className="absolute inset-0 bg-cover bg-center bg-fixed scale-105 opacity-90 transition-opacity"
         style={{
           backgroundImage: "url('/images/resultados/labios-resultado-01.png')",
         }}
       />
-      {/* Dark overlay with slight gold tint */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/95 backdrop-blur-[2px]" />
+      {/* Soft vignette overlay so lips are clearly visible while preserving text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/80" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-white">
         {/* Section Header (Guilty Freckles style) */}
