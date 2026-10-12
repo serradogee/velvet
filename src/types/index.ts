@@ -3,7 +3,7 @@ export interface Treatment {
   emoji: string
   title: string
   subtitle?: string
-  category?: 'labios' | 'micropigmentacion' | 'facial' | 'personalizado'
+  category?: 'labios' | 'micropigmentacion' | 'facial' | 'pestanas' | 'personalizado'
   tag?: string
   description: string
   benefits: string[]
