@@ -18,6 +18,10 @@ export default function Footer() {
 
         {/* Quick links */}
         <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-xs tracking-[0.2em] uppercase font-medium">
+          <Link to="/" className="text-white/70 hover:text-white transition-colors">
+            Inicio
+          </Link>
+          <span className="text-white/20">·</span>
           <Link to="/#sobre-nosotros" className="text-white/70 hover:text-white transition-colors">
             Sobre nosotros
           </Link>

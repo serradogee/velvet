@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Clock, ArrowRight, ShieldCheck, Sparkles, HeartHandshake } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import FloatingWhatsApp from '../components/layout/FloatingWhatsApp'
@@ -184,182 +183,90 @@ export default function TreatmentsPage() {
               })}
             </div>
 
-            {/* Treatments Grid */}
-          <!-- Begin Alternating Treatment Sections -->
-          <section className="space-y-24 md:space-y-32">
-            {filteredTreatments.map((treatment, idx) => (
-              <AnimatedSection key={treatment.id} className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-12">
-                {idx % 2 === 0 ? (
-                  <>
-                    <div className="flex-1 relative rounded-3xl overflow-hidden shadow-lg">
-                      <img
-                        src={treatment.image}
-                        alt={treatment.title}
-                        className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
-                      />
-                      {treatment.tag && (
-                        <div className="absolute top-4 left-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
-                          {treatment.tag}
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex-1 md:max-w-lg space-y-5">
-                      <h3 className="font-display text-3xl md:text-4xl font-bold text-black">
-                        {treatment.title}
-                      </h3>
-                      {treatment.subtitle && (
-                        <p className="text-zinc-500 uppercase text-sm font-medium">
-                          {treatment.subtitle}
-                        </p>
-                      )}
-                      <p className="text-zinc-700 text-base leading-relaxed">
-                        {treatment.description}
-                      </p>
-                      <ul className="list-disc list-inside space-y-1 text-zinc-600 text-sm">
-                        {treatment.benefits.map((b, i) => (
-                          <li key={i}>{b}</li>
-                        ))}
-                      </ul>
-                      {treatment.duration && (
-                        <p className="text-sm text-zinc-500 mt-2">Duración: {treatment.duration}</p>
-                      )}
-                      <WhatsAppButton
-                        label={`Consultar ${treatment.title}`}
-                        message={`¡Hola Velvet Clinic! Me gustaría info y cita para ${treatment.title}.`}
-                        className="mt-4 !rounded-full !border !border-black !bg-transparent !text-black !px-6 !py-2 !text-sm !font-medium hover:!bg-black hover:!text-white transition"
-                      />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex-1 md:max-w-lg space-y-5 order-2 md:order-1">
-                      <h3 className="font-display text-3xl md:text-4xl font-bold text-black">
-                        {treatment.title}
-                      </h3>
-                      {treatment.subtitle && (
-                        <p className="text-zinc-500 uppercase text-sm font-medium">
-                          {treatment.subtitle}
-                        </p>
-                      )}
-                      <p className="text-zinc-700 text-base leading-relaxed">
-                        {treatment.description}
-                      </p>
-                      <ul className="list-disc list-inside space-y-1 text-zinc-600 text-sm">
-                        {treatment.benefits.map((b, i) => (
-                          <li key={i}>{b}</li>
-                        ))}
-                      </ul>
-                      {treatment.duration && (
-                        <p className="text-sm text-zinc-500 mt-2">Duración: {treatment.duration}</p>
-                      )}
-                      <WhatsAppButton
-                        label={`Consultar ${treatment.title}`}
-                        message={`¡Hola Velvet Clinic! Me gustaría info y cita para ${treatment.title}.`}
-                        className="mt-4 !rounded-full !border !border-black !bg-transparent !text-black !px-6 !py-2 !text-sm !font-medium hover:!bg-black hover:!text-white transition"
-                      />
-                    </div>
-                    <div className="flex-1 relative rounded-3xl overflow-hidden shadow-lg order-1 md:order-2">
-                      <img
-                        src={treatment.image}
-                        alt={treatment.title}
-                        className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
-                      />
-                      {treatment.tag && (
-                        <div className="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
-                          {treatment.tag}
-                        </div>
-                      )}
-                    </div>
-                  </>
-                )}
-              </AnimatedSection>
-            ))}
-          </section>
-          <!-- End Alternating Treatment Sections -->
-            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <AnimatePresence>
-                {filteredTreatments.map((treatment) => (
-                  <motion.article
+            {/* Treatments Alternating List */}
+            <div className="space-y-20 md:space-y-28">
+              {filteredTreatments.map((treatment, idx) => {
+                const isEven = idx % 2 === 0
+                return (
+                  <AnimatedSection
                     key={treatment.id}
-                    layout
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.35 }}
-                    className="bg-zinc-50 border border-zinc-200/90 rounded-2xl overflow-hidden group flex flex-col hover:border-black/50 transition-all duration-300 shadow-sm hover:shadow-lg"
+                    delay={0.1}
+                    className="bg-zinc-50 border border-zinc-200/90 rounded-3xl overflow-hidden hover:border-black/40 transition-all duration-300 shadow-sm hover:shadow-xl"
                   >
-                    {/* Image container */}
-                    <div className="relative h-60 overflow-hidden bg-black">
-                      <img
-                        src={treatment.image}
-                        alt={treatment.title}
-                        loading="lazy"
-                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      
-                      {/* Top tag */}
-                      {treatment.tag && (
-                        <div className="absolute top-4 right-4">
-                          <span className="bg-black/80 backdrop-blur-md text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-white/20">
-                            {treatment.tag}
-                          </span>
-                        </div>
-                      )}
-
-                      {/* Duration badge */}
-                      {treatment.duration && (
-                        <div className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full text-xs font-light text-white/90 border border-white/10">
-                          <Clock className="w-3.5 h-3.5 text-white/80" />
-                          <span>{treatment.duration}</span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6 sm:p-7 flex flex-col flex-1">
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-black mb-1">
-                        {treatment.title}
-                      </h3>
-
-                      {treatment.subtitle && (
-                        <p className="text-zinc-500 text-[11px] tracking-wider uppercase font-semibold mb-3">
-                          {treatment.subtitle}
-                        </p>
-                      )}
-
-                      <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed font-light mb-5">
-                        {treatment.description}
-                      </p>
-
-                      {/* Benefits Checklist */}
-                      <div className="bg-white border border-zinc-200 rounded-xl p-4 mb-6 flex-1">
-                        <p className="text-[11px] uppercase tracking-wider text-zinc-400 font-semibold mb-2.5">
-                          Especificaciones & Beneficios:
-                        </p>
-                        <ul className="space-y-2">
-                          {treatment.benefits.map((benefit, i) => (
-                            <li key={i} className="flex items-start gap-2 text-xs text-zinc-700 font-light">
-                              <Check className="w-3.5 h-3.5 text-black shrink-0 mt-0.5" />
-                              <span>{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Button */}
-                      <div className="pt-1">
-                        <WhatsAppButton
-                          label={`Consultar ${treatment.title}`}
-                          message={`¡Hola Velvet Clinic! Me gustaría solicitar información y pedir cita para el tratamiento: ${treatment.title}.`}
-                          className="w-full !rounded-full !border !border-black !bg-transparent !text-black !py-3 !text-xs !font-semibold !tracking-[0.12em] !uppercase hover:!bg-black hover:!text-white transition-all duration-300"
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      {/* Image Column */}
+                      <div className={`lg:col-span-6 relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px] overflow-hidden bg-black ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                        <img
+                          src={treatment.image}
+                          alt={treatment.title}
+                          loading="lazy"
+                          className={`w-full h-full object-cover transition-transform duration-700 hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
+                        
+                        {/* Top tag */}
+                        {treatment.tag && (
+                          <div className="absolute top-4 left-4 z-10">
+                            <span className="bg-black/85 backdrop-blur-md text-white text-[11px] font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-white/20">
+                              {treatment.tag}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Duration badge */}
+                        {treatment.duration && (
+                          <div className="absolute bottom-4 left-4 z-10 inline-flex items-center gap-1.5 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-light text-white border border-white/10">
+                            <Clock className="w-3.5 h-3.5 text-white/80" />
+                            <span>{treatment.duration}</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Content Column */}
+                      <div className={`p-8 sm:p-10 lg:p-12 lg:col-span-6 flex flex-col justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                        {treatment.subtitle && (
+                          <span className="text-zinc-500 text-xs tracking-[0.2em] uppercase font-bold mb-2 block">
+                            {treatment.subtitle}
+                          </span>
+                        )}
+
+                        <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4 uppercase tracking-tight">
+                          {treatment.title}
+                        </h3>
+
+                        <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light mb-6">
+                          {treatment.description}
+                        </p>
+
+                        {/* Benefits list */}
+                        <div className="bg-white border border-zinc-200/80 rounded-2xl p-5 mb-8">
+                          <p className="text-[11px] uppercase tracking-wider text-zinc-400 font-bold mb-3">
+                            Especificaciones & Beneficios:
+                          </p>
+                          <ul className="space-y-2.5">
+                            {treatment.benefits.map((benefit, i) => (
+                              <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-700 font-light">
+                                <Check className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                                <span>{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Button */}
+                        <div>
+                          <WhatsAppButton
+                            label={`Consultar ${treatment.title}`}
+                            message={`¡Hola Velvet Clinic! Me gustaría solicitar información y pedir cita para el tratamiento: ${treatment.title}.`}
+                            className="w-full sm:w-auto inline-flex justify-center items-center !rounded-full !border !border-black !bg-black !text-white !px-8 !py-3.5 !text-xs !font-semibold !tracking-[0.15em] !uppercase hover:!bg-transparent hover:!text-black transition-all duration-300 shadow-md"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </motion.article>
-                ))}
-              </AnimatePresence>
-            </motion.div>
+                  </AnimatedSection>
+                )
+              })}
+            </div>
 
           </div>
         </section>

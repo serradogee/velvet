@@ -5,6 +5,7 @@ import { LOCATION } from '../../config/site'
 import Logo from '../ui/Logo'
 
 const navLinks = [
+  { label: 'Inicio', to: '/' },
   { label: 'Sobre nosotros', to: '/#sobre-nosotros' },
   { label: 'Tratamientos', to: '/tratamientos' },
   { label: 'Resultados', to: '/resultados' },
@@ -16,6 +17,12 @@ export default function Header() {
 
   const handleNavClick = (to: string) => {
     setMobileMenuOpen(false)
+    if (to === '/') {
+      if (location.pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+      return
+    }
     if (to.startsWith('/#')) {
       const hash = to.replace('/', '')
       if (location.pathname === '/') {
@@ -28,9 +35,10 @@ export default function Header() {
   }
 
   const isLinkActive = (to: string) => {
+    if (to === '/' && location.pathname === '/' && !location.hash) return true
     if (to === '/tratamientos' && location.pathname === '/tratamientos') return true
     if (to === '/resultados' && location.pathname === '/resultados') return true
-    if ((to === '/#sobre-nosotros' || to === '/#sobre-mi') && location.pathname === '/') return true
+    if ((to === '/#sobre-nosotros' || to === '/#sobre-mi') && location.pathname === '/' && location.hash) return true
     return false
   }
 
