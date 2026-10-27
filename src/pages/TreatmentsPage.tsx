@@ -185,6 +185,97 @@ export default function TreatmentsPage() {
             </div>
 
             {/* Treatments Grid */}
+          <!-- Begin Alternating Treatment Sections -->
+          <section className="space-y-24 md:space-y-32">
+            {filteredTreatments.map((treatment, idx) => (
+              <AnimatedSection key={treatment.id} className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-12">
+                {idx % 2 === 0 ? (
+                  <>
+                    <div className="flex-1 relative rounded-3xl overflow-hidden shadow-lg">
+                      <img
+                        src={treatment.image}
+                        alt={treatment.title}
+                        className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
+                      />
+                      {treatment.tag && (
+                        <div className="absolute top-4 left-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
+                          {treatment.tag}
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1 md:max-w-lg space-y-5">
+                      <h3 className="font-display text-3xl md:text-4xl font-bold text-black">
+                        {treatment.title}
+                      </h3>
+                      {treatment.subtitle && (
+                        <p className="text-zinc-500 uppercase text-sm font-medium">
+                          {treatment.subtitle}
+                        </p>
+                      )}
+                      <p className="text-zinc-700 text-base leading-relaxed">
+                        {treatment.description}
+                      </p>
+                      <ul className="list-disc list-inside space-y-1 text-zinc-600 text-sm">
+                        {treatment.benefits.map((b, i) => (
+                          <li key={i}>{b}</li>
+                        ))}
+                      </ul>
+                      {treatment.duration && (
+                        <p className="text-sm text-zinc-500 mt-2">Duración: {treatment.duration}</p>
+                      )}
+                      <WhatsAppButton
+                        label={`Consultar ${treatment.title}`}
+                        message={`¡Hola Velvet Clinic! Me gustaría info y cita para ${treatment.title}.`}
+                        className="mt-4 !rounded-full !border !border-black !bg-transparent !text-black !px-6 !py-2 !text-sm !font-medium hover:!bg-black hover:!text-white transition"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex-1 md:max-w-lg space-y-5 order-2 md:order-1">
+                      <h3 className="font-display text-3xl md:text-4xl font-bold text-black">
+                        {treatment.title}
+                      </h3>
+                      {treatment.subtitle && (
+                        <p className="text-zinc-500 uppercase text-sm font-medium">
+                          {treatment.subtitle}
+                        </p>
+                      )}
+                      <p className="text-zinc-700 text-base leading-relaxed">
+                        {treatment.description}
+                      </p>
+                      <ul className="list-disc list-inside space-y-1 text-zinc-600 text-sm">
+                        {treatment.benefits.map((b, i) => (
+                          <li key={i}>{b}</li>
+                        ))}
+                      </ul>
+                      {treatment.duration && (
+                        <p className="text-sm text-zinc-500 mt-2">Duración: {treatment.duration}</p>
+                      )}
+                      <WhatsAppButton
+                        label={`Consultar ${treatment.title}`}
+                        message={`¡Hola Velvet Clinic! Me gustaría info y cita para ${treatment.title}.`}
+                        className="mt-4 !rounded-full !border !border-black !bg-transparent !text-black !px-6 !py-2 !text-sm !font-medium hover:!bg-black hover:!text-white transition"
+                      />
+                    </div>
+                    <div className="flex-1 relative rounded-3xl overflow-hidden shadow-lg order-1 md:order-2">
+                      <img
+                        src={treatment.image}
+                        alt={treatment.title}
+                        className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${getImageFocusClass(treatment.imageFocus)}`}
+                      />
+                      {treatment.tag && (
+                        <div className="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
+                          {treatment.tag}
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
+              </AnimatedSection>
+            ))}
+          </section>
+          <!-- End Alternating Treatment Sections -->
             <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <AnimatePresence>
                 {filteredTreatments.map((treatment) => (
