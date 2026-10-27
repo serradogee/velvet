@@ -12,14 +12,14 @@ export default function LandingPage() {
     <>
       <Header />
       <main>
-        {/* Bloque 1: NEGRO - Hero & Presentación (Foto en cápsula ovalada) */}
+        {/* Primera vista: VELVET CLINIC CARE */}
+        <PhilosophyCare />
+
+        {/* Hero & Presentación (Foto en cápsula ovalada) */}
         <About />
 
-        {/* Bloque 2: BLANCO (Letra negra) - Checklist con ✔️ & Diferenciales */}
+        {/* Checklist con ✔️ & Diferenciales */}
         <WhyVelvet />
-
-        {/* Bloque 3: NEGRO (Fondo con foto de labios + overlay oscuro) - Tratamientos & Filosofía Care */}
-        <PhilosophyCare />
 
         {/* Bloque 4: BLANCO (Letra negra) - Skin & Beauty médica */}
         <SkinCareStory />

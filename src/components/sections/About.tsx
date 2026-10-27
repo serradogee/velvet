@@ -84,7 +84,7 @@ export default function About() {
                 <img
                   src="/images/jennyfer-sobre-mi.jpg"
                   alt="Velvet Clinic — Medicina Estética Avanzada"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-[center_12%] transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 

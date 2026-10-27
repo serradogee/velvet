@@ -36,7 +36,7 @@ export const treatments: Treatment[] = [
       'Incorporación inmediata a la actividad diaria sin tiempo de baja',
     ],
     duration: '60 - 75 min',
-    image: '/images/resultados/perfil-cliente-despues.jpg',
+    image: '/images/resultados/armonizacion-facial-care.jpg',
     imageFocus: 'profile',
   },
   {
@@ -74,7 +74,7 @@ export const treatments: Treatment[] = [
       'Retención de color uniforme con durabilidad clínica de 18 a 36 meses',
     ],
     duration: '90 - 120 min',
-    image: '/images/resultados/micropigmentacion-labios.png',
+    image: '/images/resultados/micropigmentacion-realista-care.jpg',
     imageFocus: 'center',
   },
   {

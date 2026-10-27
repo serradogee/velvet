@@ -10,13 +10,13 @@ const careFeatures = [
     badge: 'Técnica Firma',
   },
   {
-    image: '/images/resultados/resultado-cliente-01.jpg',
+    image: '/images/resultados/armonizacion-facial-care.jpg',
     title: 'Armonización Facial Completa',
     desc: 'Equilibrio y definición de facciones mediante ácido hialurónico de máxima pureza.',
     badge: 'Medicina Avanzada',
   },
   {
-    image: '/images/resultados/micropigmentacion-labios.png',
+    image: '/images/resultados/micropigmentacion-realista-care.jpg',
     title: 'Micropigmentación Realista',
     desc: 'Efecto acuarela y realismo para labios y rasgos. Color sutil y definición duradera.',
     badge: 'Realismo & Color',
@@ -25,12 +25,16 @@ const careFeatures = [
 
 export default function PhilosophyCare() {
   return (
-    <section className="relative py-28 md:py-36 overflow-hidden border-b border-white/10 bg-black">
-      {/* ── BACKGROUND PHOTO OF LIPS (Clear and vivid, Guilty Freckles style) ── */}
+    <section
+      id="velvet-clinic-care"
+      className="relative pt-40 pb-28 md:pt-48 md:pb-36 overflow-hidden border-b border-white/10 bg-black"
+    >
+      {/* ── BACKGROUND PHOTO (primera foto de la web) ── */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed scale-105 opacity-90 transition-opacity"
+        className="absolute inset-0 bg-cover bg-fixed scale-105 opacity-90 transition-opacity"
         style={{
-          backgroundImage: "url('/images/resultados/labios-resultado-01.png')",
+          backgroundImage: "url('/images/jennyfer-sobre-mi.jpg')",
+          backgroundPosition: 'center 18%',
         }}
       />
       {/* Soft vignette overlay so lips are clearly visible while preserving text contrast */}
@@ -71,7 +75,13 @@ export default function PhilosophyCare() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                      item.title.includes('Armonización')
+                        ? 'object-[center_42%]'
+                        : item.title.includes('Micropigmentación')
+                          ? 'object-[center_62%]'
+                          : 'object-center'
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80" />
                   <span className="absolute top-3 right-3 bg-black/80 backdrop-blur-md border border-white/20 text-[10px] tracking-[0.2em] uppercase font-semibold text-white px-3 py-1 rounded-full">
