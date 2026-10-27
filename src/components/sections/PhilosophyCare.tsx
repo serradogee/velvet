@@ -43,8 +43,9 @@ export default function PhilosophyCare() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-white">
         {/* Section Header (Guilty Freckles style) */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-6">
-          <h2 className="text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight uppercase mb-3">
-            VELVET CLINIC
+          <h2 className="text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight uppercase mb-3 inline-flex items-center justify-center">
+            <span>VELVET CLINIC</span>
+            <sup className="text-xs sm:text-sm lg:text-base font-semibold tracking-normal text-white/90 ml-1 -top-3 sm:-top-4 lg:-top-5">™</sup>
           </h2>
           <p className="text-white/80 font-display italic text-base sm:text-lg lg:text-xl font-light tracking-wide">
             Nuestra <em className="text-white not-italic font-medium underline decoration-white/40 underline-offset-4">filosofía</em> del cuidado de la piel y tratamientos

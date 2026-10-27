@@ -96,25 +96,6 @@ export const treatments: Treatment[] = [
     image: '/images/tratamientos/pecas-micropigmentacion.jpg',
     imageFocus: 'center',
   },
-  {
-    id: 'pestanas-lifting-extensiones',
-    emoji: '👁️',
-    title: 'Lifting & Extensiones de Pestañas',
-    subtitle: 'Diseño de Mirada · Curvatura, Volumen & Densidad',
-    category: 'pestanas',
-    tag: 'Mirada Velvet',
-    description:
-      'Servicio profesional de realce y estilización de la mirada. Desde lifting con nutrición de queratina para arquear y potenciar la pestaña natural, hasta extensiones pelo a pelo y volumen ruso adaptadas con máxima precisión a la forma del ojo.',
-    benefits: [
-      'Estudio previo del ojo para seleccionar la curvatura y longitud ideal',
-      'Adhesivos y productos hipoalergénicos de máxima seguridad ocular',
-      'Efecto rímel y mirada abierta, densa y luminosa 24/7',
-      'Mantenimiento cómodo y respetuoso con la pestaña natural',
-    ],
-    duration: '60 - 90 min',
-    image: '/images/tratamientos/pestanas-lifting.jpg',
-    imageFocus: 'center',
-  },
 ]
 
 export const results: ResultItem[] = [
