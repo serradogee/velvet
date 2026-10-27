@@ -47,8 +47,8 @@ export default function PhilosophyCare() {
             <span>VELVET CLINIC</span>
             <sup className="text-xs sm:text-sm lg:text-base font-semibold tracking-normal text-white/90 ml-1 -top-3 sm:-top-4 lg:-top-5">™</sup>
           </h2>
-          <p className="text-white/80 font-display italic text-base sm:text-lg lg:text-xl font-light tracking-wide">
-            Nuestra <em className="text-white not-italic font-medium underline decoration-white/40 underline-offset-4">filosofía</em> del cuidado de la piel y tratamientos
+          <p className="text-white/80 font-display italic text-base sm:text-lg lg:text-xl font-light tracking-wide uppercase">
+            Luxury Aesthetic Medicine
           </p>
         </AnimatedSection>
 
