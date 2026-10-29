@@ -55,7 +55,7 @@ export const treatments: Treatment[] = [
       'Durabilidad clínica estimada entre 12 y 18 meses',
     ],
     duration: '35 - 45 min',
-    image: '/images/resultados/perfil-despues.png',
+    image: '/images/tratamientos/rinomodelacion.jpg',
     imageFocus: 'profile',
   },
   {
