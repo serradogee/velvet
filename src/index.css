@@ -73,4 +73,30 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  @keyframes whatsapp-wobble {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    6%, 18% {
+      transform: scale(1.12) rotate(-12deg);
+    }
+    12%, 24% {
+      transform: scale(1.12) rotate(12deg);
+    }
+    30% {
+      transform: scale(1.05) rotate(-4deg);
+    }
+    36% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  .animate-whatsapp-wobble {
+    animation: whatsapp-wobble 3.5s ease-in-out infinite;
+  }
+
+  .animate-whatsapp-wobble:hover {
+    animation-play-state: paused;
+  }
 }

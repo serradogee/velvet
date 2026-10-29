@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react'
+import WhatsAppIcon from '../ui/WhatsAppIcon'
 import { WHATSAPP_URL } from '../../config/site'
 
 export default function FloatingWhatsApp() {
@@ -7,11 +7,18 @@ export default function FloatingWhatsApp() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 text-sm font-medium text-white shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] md:bottom-8 md:right-8 md:px-6 md:py-4 md:text-base"
-      aria-label="Reservar cita por WhatsApp"
+      className="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#25D366] text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 active:scale-95 hover:shadow-[0_12px_40px_rgba(37,211,102,0.65)] animate-whatsapp-wobble group"
+      aria-label="WhatsApp"
+      title="WhatsApp"
     >
-      <MessageCircle className="w-5 h-5" />
-      <span>Reservar cita</span>
+      {/* Halo de pulsación suave */}
+      <span
+        className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping -z-10 pointer-events-none"
+        style={{ animationDuration: '3s' }}
+      />
+
+      {/* Emoticono / Icono de WhatsApp */}
+      <WhatsAppIcon className="w-8 h-8 md:w-9 md:h-9 drop-shadow-sm transition-transform duration-300 group-hover:scale-105" />
     </a>
   )
 }
