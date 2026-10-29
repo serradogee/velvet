@@ -17,8 +17,8 @@ export const treatments: Treatment[] = [
       'Diseño biométrico adaptado a la armonía y fisionomía de cada paciente',
     ],
     duration: '45 - 60 min',
-    image: '/images/resultados/labios-principal.png',
-    imageFocus: 'lips',
+    image: '/images/resultados/labios-iconic-bratz.jpg',
+    imageFocus: 'russian-lips',
   },
   {
     id: 'armonizacion-facial',

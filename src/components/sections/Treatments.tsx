@@ -20,7 +20,7 @@ export default function Treatments() {
           {treatments.map((treatment, index) => (
             <AnimatedSection key={treatment.id} delay={index * 0.1}>
               <article className="premium-card overflow-hidden group h-full flex flex-col">
-                <div className="relative h-56 md:h-64 overflow-hidden bg-velvet-black">
+                <div className="relative h-60 md:h-72 overflow-hidden bg-velvet-black">
                   <img
                     src={treatment.image}
                     alt={treatment.title}

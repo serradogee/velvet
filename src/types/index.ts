@@ -9,8 +9,8 @@ export interface Treatment {
   benefits: string[]
   duration?: string
   image: string
-  /** Enfoque de la imagen: lips, center, profile */
-  imageFocus?: 'lips' | 'center' | 'profile'
+  /** Enfoque de la imagen: lips, center, profile, russian-lips */
+  imageFocus?: 'lips' | 'center' | 'profile' | 'russian-lips'
   /** Rotación en grados para corregir orientación */
   imageRotate?: number
 }
@@ -34,7 +34,7 @@ export interface ResultItem {
   src?: string
   poster?: string
   /** Enfoque visual de la imagen en la galería */
-  imageFocus?: 'lips' | 'center' | 'profile'
+  imageFocus?: 'lips' | 'center' | 'profile' | 'russian-lips'
 }
 
 export interface ClinicVideo {
