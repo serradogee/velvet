@@ -44,11 +44,34 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40">
-      {/* Top Sticky Announcement Bar (Guilty Freckles style) */}
-      <div className="bg-white text-black py-2 px-4 text-center border-b border-black/10">
-        <p className="text-[11px] sm:text-xs tracking-[0.25em] font-semibold uppercase font-display">
-          VELVET CLINIC BRAND · MEDICINA ESTÉTICA & ARMONIZACIÓN FACIAL · MADRID
-        </p>
+      {/* Top Sticky Announcement Bar - Continuous Marquee */}
+      <div className="bg-white text-black py-2 overflow-hidden border-b border-black/10 select-none">
+        <div className="flex w-max animate-marquee">
+          <div className="flex shrink-0 items-center">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="flex items-center">
+                <span className="text-[11px] sm:text-xs tracking-[0.25em] font-semibold uppercase font-display whitespace-nowrap">
+                  VELVET CLINIC BRAND · MEDICINA ESTÉTICA & ARMONIZACIÓN FACIAL · MADRID
+                </span>
+                <span className="mx-6 sm:mx-8 text-[11px] sm:text-xs text-black/35 font-light select-none">
+                  ·
+                </span>
+              </span>
+            ))}
+          </div>
+          <div className="flex shrink-0 items-center" aria-hidden="true">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="flex items-center">
+                <span className="text-[11px] sm:text-xs tracking-[0.25em] font-semibold uppercase font-display whitespace-nowrap">
+                  VELVET CLINIC BRAND · MEDICINA ESTÉTICA & ARMONIZACIÓN FACIAL · MADRID
+                </span>
+                <span className="mx-6 sm:mx-8 text-[11px] sm:text-xs text-black/35 font-light select-none">
+                  ·
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Main Sticky Navbar */}
