@@ -11,6 +11,8 @@ const navLinks = [
   { label: 'Resultados', to: '/resultados' },
 ]
 
+const BRAND_BAR_TEXT = 'VELVET CLINIC · MEDICINA ESTÉTICA · MICROPIGMENTACIÓN HIPERREALISTA'
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
@@ -51,7 +53,7 @@ export default function Header() {
             {Array.from({ length: 6 }).map((_, i) => (
               <span key={i} className="flex items-center">
                 <span className="text-[11px] sm:text-xs tracking-[0.25em] font-semibold uppercase font-display whitespace-nowrap">
-                  VELVET CLINIC BRAND · MEDICINA ESTÉTICA & ARMONIZACIÓN FACIAL · MADRID
+                  {BRAND_BAR_TEXT}
                 </span>
                 <span className="mx-6 sm:mx-8 text-[11px] sm:text-xs text-black/35 font-light select-none">
                   ·
@@ -63,7 +65,7 @@ export default function Header() {
             {Array.from({ length: 6 }).map((_, i) => (
               <span key={i} className="flex items-center">
                 <span className="text-[11px] sm:text-xs tracking-[0.25em] font-semibold uppercase font-display whitespace-nowrap">
-                  VELVET CLINIC BRAND · MEDICINA ESTÉTICA & ARMONIZACIÓN FACIAL · MADRID
+                  {BRAND_BAR_TEXT}
                 </span>
                 <span className="mx-6 sm:mx-8 text-[11px] sm:text-xs text-black/35 font-light select-none">
                   ·
