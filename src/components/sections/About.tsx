@@ -64,7 +64,6 @@ export default function About() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <WhatsAppButton
                   label="Reservar cita en Madrid"
-                  className="btn-pill-light !bg-transparent !border-white hover:!bg-white hover:!text-black"
                 />
                 <Link
                   to="/tratamientos"

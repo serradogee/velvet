@@ -89,8 +89,6 @@ export default function SkinCareStory() {
               {/* Pill Button */}
               <WhatsAppButton
                 label="Pedir asesoramiento por WhatsApp"
-                message="¡Hola Velvet Clinic! Me gustaría recibir asesoramiento personalizado sobre los tratamientos."
-                className="!rounded-full !border !border-black !bg-transparent !text-black !px-8 !py-3.5 !text-xs !font-semibold !tracking-[0.15em] !uppercase hover:!bg-black hover:!text-white transition-all duration-300 shadow-sm"
               />
             </AnimatedSection>
           </div>

@@ -56,8 +56,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-start gap-4"
         >
           <WhatsAppButton
-            label="Pedir cita →"
-            className="!bg-velvet-gold !text-white !border-velvet-gold hover:!bg-white hover:!text-black"
+            label="Pedir cita"
           />
           <a
             href="#tratamientos"

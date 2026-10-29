@@ -86,7 +86,6 @@ export default function ResultsPage() {
               <div className="flex flex-wrap justify-center items-center gap-4">
                 <WhatsAppButton
                   label="Pedir cita por WhatsApp"
-                  className="btn-pill-light !bg-white !text-black !border-white hover:!bg-transparent hover:!text-white font-medium shadow-md"
                 />
                 <a
                   href="#galeria-resultados"
@@ -207,8 +206,6 @@ export default function ResultsPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <WhatsAppButton
                     label="Pedir cita por WhatsApp"
-                    message="¡Hola Velvet Clinic! He visto los resultados en vuestra web y me gustaría solicitar una cita o información personalizada."
-                    className="btn-pill-light !bg-white !text-black !border-white hover:!bg-transparent hover:!text-white font-medium shadow-md"
                   />
                   <Link
                     to="/tratamientos"

@@ -59,8 +59,6 @@ export default function WhyVelvet() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <WhatsAppButton
                   label="Reservar cita ahora"
-                  message="¡Hola Velvet Clinic! Me gustaría solicitar información sobre los tratamientos y reservar una cita."
-                  className="!rounded-full !border !border-black !bg-transparent !text-black !px-8 !py-3.5 !text-xs !font-semibold !tracking-[0.15em] !uppercase hover:!bg-black hover:!text-white transition-all duration-300 shadow-sm"
                 />
               </div>
             </AnimatedSection>

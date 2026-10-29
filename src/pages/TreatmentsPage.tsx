@@ -104,7 +104,6 @@ export default function TreatmentsPage() {
                   <div className="flex flex-wrap items-center gap-4">
                     <WhatsAppButton
                       label="Pedir cita por WhatsApp"
-                      className="btn-pill-light !bg-white !text-black !border-white hover:!bg-transparent hover:!text-white font-medium shadow-md"
                     />
                     <a
                       href="#catalogo-tratamientos"
@@ -256,8 +255,7 @@ export default function TreatmentsPage() {
                         <div>
                           <WhatsAppButton
                             label={`Consultar ${treatment.title}`}
-                            message={`¡Hola Velvet Clinic! Me gustaría solicitar información y pedir cita para el tratamiento: ${treatment.title}.`}
-                            className="w-full sm:w-auto inline-flex justify-center items-center !rounded-full !border !border-black !bg-black !text-white !px-8 !py-3.5 !text-xs !font-semibold !tracking-[0.15em] !uppercase hover:!bg-transparent hover:!text-black transition-all duration-300 shadow-md"
+                            className="w-full sm:w-auto"
                           />
                         </div>
                       </div>
@@ -323,8 +321,6 @@ export default function TreatmentsPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <WhatsAppButton
                     label="Asesoramiento por WhatsApp"
-                    message="¡Hola Velvet Clinic! No estoy segura de qué tratamiento es el más adecuado para mí. ¿Podríais asesorarme?"
-                    className="!rounded-full !border !border-black !bg-black !text-white !px-8 !py-3.5 !text-xs !font-semibold !tracking-[0.15em] !uppercase hover:!bg-transparent hover:!text-black transition-all duration-300 shadow-md"
                   />
                   <Link
                     to="/#sobre-nosotros"

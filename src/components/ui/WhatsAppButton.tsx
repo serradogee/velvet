@@ -13,26 +13,23 @@ interface WhatsAppButtonProps {
 
 export default function WhatsAppButton({
   label,
-  variant = 'primary',
   className = '',
   showIcon = true,
-  message,
 }: WhatsAppButtonProps) {
-  const baseClass = variant === 'gold' ? 'btn-whatsapp-gold' : 'btn-whatsapp'
-  const targetUrl = message
-    ? `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`
-    : WHATSAPP_URL
-
   return (
     <a
-      href={targetUrl}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${baseClass} ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] text-white px-7 py-3.5 text-xs font-semibold tracking-[0.15em] uppercase shadow-[0_8px_25px_rgba(37,211,102,0.35)] transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-[#20ba5a] hover:shadow-[0_12px_35px_rgba(37,211,102,0.55)] border border-[#25D366] group ${className}`}
       aria-label={label}
+      title={label}
     >
-      {showIcon && <WhatsAppIcon className="w-4 h-4 md:w-5 md:h-5 shrink-0" />}
-      {label}
+      {showIcon && (
+        <WhatsAppIcon className="w-5 h-5 shrink-0 text-white drop-shadow-sm transition-transform duration-300 group-hover:scale-110" />
+      )}
+      <span className="drop-shadow-sm">{label}</span>
     </a>
   )
 }
+
