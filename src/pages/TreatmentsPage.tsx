@@ -193,7 +193,7 @@ export default function TreatmentsPage() {
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                       {/* Image Column */}
-                      <div className={`lg:col-span-6 relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px] overflow-hidden bg-black ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                      <div className={`lg:col-span-6 relative aspect-square sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[340px] overflow-hidden bg-black ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                         <img
                           src={treatment.image}
                           alt={treatment.title}
